@@ -1,0 +1,403 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Threading;
+
+namespace Software_Dev___Building_an_Application
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+
+        //Thread.Sleep(5000);
+        //Console.Write("");
+        //Console.WriteLine("1:0 your team scored a point: ");
+        {
+            Thread.Sleep(2000);
+            //Thread.Sleep stops text for a given time, in this case its 2seconds
+            Console.WriteLine("Welcome to the Football Leauge.");
+            Console.WriteLine("");
+
+            Thread.Sleep(3000);
+            Console.WriteLine("Here are the teams which will be playing.");
+            Console.WriteLine("");
+            Console.WriteLine("");
+
+            Thread.Sleep(4000);
+            //List of football teams playing in the leauge
+            Console.WriteLine("--------------------------------------------------------");
+            Console.WriteLine("--------------Team(1) = Manchester----------------------");
+            Console.WriteLine("--------------Team(2) = Leeds---------------------------");
+            Console.WriteLine("--------------Team(3) = Chelsea-------------------------");
+            Console.WriteLine("--------------Team(4) = Tiverton------------------------");
+            Console.WriteLine("--------------Team(5) = Eveton--------------------------");
+            Console.WriteLine("--------------Team(6) = Bristol-------------------------");
+            Console.WriteLine("--------------Team(7) = Liverpool-----------------------");
+            Console.WriteLine("--------------Team(8) = Burnley-------------------------");
+            Console.WriteLine("--------------------------------------------------------");
+            Console.WriteLine("");
+            Console.WriteLine("");
+
+            Thread.Sleep(3000);
+            Console.WriteLine("Please pick a team number which you think will win the leauge");
+            Console.WriteLine("");
+
+
+            string myoptions;
+            myoptions = Console.ReadLine();
+            switch (myoptions)
+            {
+                //each number is connected to a method, and each method is a football team.
+                //This is why, when the user enters the football team they want, additional text will apear depending on what number is entered.
+                case "1":
+                    Manchester_Team();
+                    break;
+                case "2":
+                    Leeds_Team(); ;
+                    break;
+                case "3":
+                    Chelsea_Team();
+                    break;
+                case "4":
+                    Tiverton_Team();
+                    break;
+                case "5":
+                    Eveton_Team();
+                    break;
+                case "6":
+                    Bristol_Team();
+                    break;
+                case "7":
+                    Liverpool_Team();
+                    break;
+                case "8":
+                    Burnley_Team();
+                    break;
+            }
+        }
+
+        // ************ Football Teams *****************
+        static void Manchester_Team()
+        {
+            //Delays the text by 2.5seconds
+            Thread.Sleep(3500);
+            Console.WriteLine("Your team is Manchester");
+            Console.WriteLine("");
+
+            // Random Team Generator
+            Thread.Sleep(3500);
+            //Random Team generator
+            string[] football_teams = { "Leeds", "Chelsea", "Tiverton", "Eveton", "Bristol", "Liverpool", "Burnley" };
+            Random random = new Random();
+            int index = random.Next(football_teams.Length);
+            Console.WriteLine($"Your going to be playing against {football_teams[index]}");
+            Console.WriteLine("");
+
+            Thread.Sleep(3500);
+            Console.WriteLine("The match has started");
+            Console.WriteLine("");
+
+            Thread.Sleep(3500);
+            Console.WriteLine("Your Team Won the match, your now being directed to the semi final.");
+            Console.WriteLine("");
+
+            //Semi Final Game
+            Thread.Sleep(3500);
+            //Random Team generator
+            string[] football_teams1 = { "Leeds", "Chelsea", "Tiverton", "Eveton", "Bristol", "Liverpool", "Burnley" };
+            Random random1 = new Random();
+            int index1 = random.Next(football_teams.Length);
+            Console.WriteLine($"Your going to be playing against {football_teams1[index]}");
+            Console.WriteLine("");
+
+            Thread.Sleep(3500);
+            Console.WriteLine("The match has started");
+            Console.WriteLine("");
+
+            Thread.Sleep(3500);
+            Console.WriteLine("Your Team Lost the match");
+
+        }
+
+        static void Leeds_Team()
+        {
+            //Delays the text by 3.5seconds
+            Thread.Sleep(3500);
+            Console.WriteLine("Your team is Leeds");
+            Console.WriteLine("");
+
+            // Random Team Generator
+            Thread.Sleep(3500);
+            //Random Team generator
+            string[] football_teams = { "Manchester", "Chelsea", "Tiverton", "Eveton", "Bristol", "Liverpool", "Burnley" };
+            Random random = new Random();
+            int index = random.Next(football_teams.Length);
+            Console.WriteLine($"Your going to be playing against {football_teams[index]}");
+            Console.WriteLine("");
+
+            Thread.Sleep(3500);
+            Console.WriteLine("The match has started");
+            Console.WriteLine("");
+
+            Thread.Sleep(3500);
+            Console.WriteLine("Your Team Won the match. The score was 3:2");
+            Console.WriteLine("");
+
+            Thread.Sleep(3500);
+            Console.WriteLine("Congrats, your now being directed to the Semi Final");
+            Console.WriteLine("");
+            Console.WriteLine("");
+
+            //Semi Final Game
+            Thread.Sleep(4500);
+            //Random Team generator
+            string[] football_teams1 = { "Manchester", "Leeds", "Chelsea", "Tiverton", "Eveton", "Bristol", "Liverpool", "Burnley" };
+            Random random1 = new Random();
+            int index1 = random.Next(football_teams.Length);
+            Console.WriteLine($"Your going to be playing against {football_teams1[index]}");
+            Console.WriteLine("");
+
+            Thread.Sleep(3500);
+            Console.WriteLine("The match has started");
+            Console.WriteLine("");
+
+            Thread.Sleep(3500);
+            Console.WriteLine("Your Team Won the match. The score was 1:0");
+            Console.WriteLine("");
+
+            Thread.Sleep(3500);
+            Console.WriteLine("Congrats, your now being directed to the Final Final");
+            Console.WriteLine("");
+            Console.WriteLine("");
+
+            //Final Game
+            Thread.Sleep(3500);
+            //Random Team generator
+            string[] football_teams2 = { "Manchester", "Leeds", "Chelsea", "Tiverton", "Eveton", "Bristol", "Liverpool", "Burnley" };
+            Random random2 = new Random();
+            int index2 = random.Next(football_teams.Length);
+            Console.WriteLine($"Your going to be playing against {football_teams2[index]}");
+            Console.WriteLine("");
+
+            Thread.Sleep(3500);
+            Console.WriteLine("The match has started");
+            Console.WriteLine("");
+
+            Thread.Sleep(3500);
+            Console.WriteLine(" Congratulations, your team Won the Football Leauge. The end score was 4:2");
+            Console.WriteLine("");
+        }
+
+        static void Chelsea_Team()
+        {
+            //Delays the text by 2.5seconds
+            Thread.Sleep(3500);
+            Console.WriteLine("");
+            Console.WriteLine("Your team is Chelsea");
+            Console.WriteLine("");
+
+            // Random Team Generator
+            Thread.Sleep(3500);
+            string[] football_teams = { "Leeds", "Tiverton", "Eveton", "Bristol", "Liverpool", "Burnley" };
+            Random random = new Random();
+            int index = random.Next(football_teams.Length);
+            Console.WriteLine($"Your going to be playing against {football_teams[index]}");
+            Console.WriteLine("");
+
+            Thread.Sleep(3500);
+            Console.WriteLine("The match has started");
+            Console.WriteLine("");
+
+            Thread.Sleep(3500);
+            Console.WriteLine("Your Team Lost the match. The score was 1:2");
+            Console.WriteLine("");
+
+        }
+
+        static void Tiverton_Team()
+        {
+            //Delays the text by 3.5seconds
+            Thread.Sleep(3500);
+            Console.WriteLine("Your team is Tiverton");
+            Console.WriteLine("");
+
+            Thread.Sleep(3500);
+            //Random Team generator
+            string[] football_teams = { "Manchester", "Chelsea", "Leeds", "Eveton", "Bristol", "Liverpool", "Burnley" };
+            Random random = new Random();
+            int index = random.Next(football_teams.Length);
+            Console.WriteLine($"Your going to be playing against {football_teams[index]}");
+            Console.WriteLine("");
+
+            Thread.Sleep(3500);
+            Console.WriteLine("The match has started");
+            Console.WriteLine("");
+
+            Thread.Sleep(3500);
+            Console.WriteLine("Your team lost the match. The score was 1:3");
+            Console.WriteLine("");
+        }
+
+        static void Eveton_Team()
+        {
+            //Delays the text by 3.5seconds
+            Thread.Sleep(3500);
+            Console.WriteLine("Your team is Eveton");
+            Console.WriteLine("");
+
+            Thread.Sleep(3500);
+            //Random Team generator
+            string[] football_teams = { "Manchester", "Chelsea", "Tiverton", "Eveton", "Bristol", "Liverpool", "Burnley" };
+            Random random = new Random();
+            int index = random.Next(football_teams.Length);
+            Console.WriteLine($"Your going to be playing against {football_teams[index]}");
+            Console.WriteLine("");
+
+            Thread.Sleep(3500);
+            Console.WriteLine("The match has started");
+            Console.WriteLine("");
+
+            Thread.Sleep(3500);
+            Console.WriteLine("Your team Won the match, your in the semi final");
+            Console.WriteLine("");
+        }
+
+        static void Bristol_Team()
+        {
+            //Delays the text by 3.5seconds
+            Thread.Sleep(3500);
+            Console.WriteLine("Your team is Bristol");
+            Console.WriteLine("");
+
+            // Random Team Generator
+            Thread.Sleep(3500);
+            string[] football_teams = { "Manchester", "Chelsea", "Tiverton", "Eveton", "Liverpool", "Burnley" };
+            Random random = new Random();
+            int index = random.Next(football_teams.Length);
+            Console.WriteLine($"Your going to be playing against {football_teams[index]}");
+            Console.WriteLine("");
+
+            Thread.Sleep(3500);
+            Console.WriteLine("The match has started");
+            Console.WriteLine("");
+
+            Thread.Sleep(3500);
+            Console.WriteLine("Your team Won the match, your in the semi final");
+            Console.WriteLine("");
+            Console.WriteLine("The score was 3:1");
+            Console.WriteLine("");
+
+
+            //semi final
+            // Random Team Generator
+            Thread.Sleep(4500);
+            string[] football_teams1 = { "Manchester", "Chelsea", "Tiverton", "Eveton", "Liverpool", "Burnley" };
+            Random random1 = new Random();
+            int index1 = random.Next(football_teams.Length);
+            Console.WriteLine($"Your going to be playing against {football_teams1[index]}");
+            Console.WriteLine("");
+
+            Thread.Sleep(3500);
+            Console.WriteLine("The match has started");
+            Console.WriteLine("");
+
+            Thread.Sleep(3500);
+            Console.WriteLine("Your team lost the match. The score was 2:3");
+            Console.WriteLine("");
+        }
+
+        static void Liverpool_Team()
+        {
+            //Delays the text by 3.5seconds
+            Thread.Sleep(3500);
+            Console.WriteLine("Your team is Liverpool");
+            Console.WriteLine("");
+
+            // Random Team Generator
+            Thread.Sleep(3500);
+            string[] football_teams = { "Manchester", "Chelsea", "Tiverton", "Eveton", "Bristol", "Leeds", "Burnley" };
+            Random random = new Random();
+            int index = random.Next(football_teams.Length);
+            Console.WriteLine($"Your going to be playing against {football_teams[index]}");
+            Console.WriteLine("");
+
+            Thread.Sleep(3500);
+            Console.WriteLine("The match has started");
+            Console.WriteLine("");
+
+            Thread.Sleep(3500);
+            Console.WriteLine("Your Team Won the match. The score was 2:0");
+            Console.WriteLine("");
+            Console.WriteLine("your now being directed to the Semi final.");
+            Console.WriteLine("");
+            Console.WriteLine("");
+
+
+            //Semi Final Game
+            Thread.Sleep(3500);
+            string[] football_teams1 = { "Manchester", "Leeds", "Chelsea", "Tiverton", "Eveton", "Bristol", "Burnley" };
+            Random random1 = new Random();
+            int index1 = random.Next(football_teams.Length);
+            Console.WriteLine($"Your going to be playing against {football_teams1[index]}");
+            Console.WriteLine("");
+
+            Thread.Sleep(3500);
+            Console.WriteLine("The match has started");
+            Console.WriteLine("");
+
+            Thread.Sleep(3500);
+            Console.WriteLine("Your Team Won the match. The score was 4:1");
+            Console.WriteLine("");
+            Console.WriteLine("Your now being directedd to the final.");
+            Console.WriteLine("");
+            Console.WriteLine("");
+
+
+            //Final Game
+            Thread.Sleep(3500);
+            string[] football_teams2 = { "Manchester", "Leeds", "Chelsea", "Tiverton", "Eveton", "Bristol", "Burnley" };
+            Random random2 = new Random();
+            int index2 = random.Next(football_teams.Length);
+            Console.WriteLine($"Your going to be playing against {football_teams2[index]}");
+
+            Console.WriteLine("");
+            Thread.Sleep(3500);
+            Console.WriteLine("The match has started");
+            Console.WriteLine("");
+
+            Thread.Sleep(3500);
+            Console.WriteLine("Your team lost. The score was 1:2");
+            Console.WriteLine("");
+            Console.WriteLine("Better luck next year");
+            Console.WriteLine("");
+
+        }
+
+        static void Burnley_Team()
+        {
+            //Delays the text by 3.5seconds
+            Thread.Sleep(3500);
+            Console.WriteLine("Your team is Burnley");
+            Console.WriteLine("");
+
+            // Random Team Generator
+            Thread.Sleep(3500);
+            string[] football_teams = { "Manchester", "Chelsea", "Leeds", "Eveton", "Bristol", "Liverpool", };
+            Random random = new Random();
+            int index = random.Next(football_teams.Length);
+            Console.WriteLine($"Your going to be playing against {football_teams[index]}");
+            Console.WriteLine("");
+
+            Thread.Sleep(3500);
+            Console.WriteLine("The match has started");
+            Console.WriteLine("");
+
+            Thread.Sleep(3500);
+            Console.WriteLine("Your team lost the match. The score was 2:4");
+            Console.WriteLine("");
+            Console.WriteLine("Your out of the leauge!");
+
+        }
+    }
+}
